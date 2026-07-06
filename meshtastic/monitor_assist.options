@@ -1,0 +1,8 @@
+# options for nanopb para el módulo MonitorAssist
+# https://jpa.kapsi.fi/nanopb/docs/reference.html#proto-file-options
+
+*MonitorAssistTelemetry.timestamp    int_size:32
+*MonitorAssistTelemetry.heart_rate   int_size:8
+*MonitorAssistTelemetry.lat          int_size:32
+*MonitorAssistTelemetry.lon          int_size:32
+*MonitorAssistTelemetry.assist_flags int_size:8

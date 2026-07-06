@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package meshtastic;
+
+option csharp_namespace = "Meshtastic.Protobufs";
+option go_package = "github.com/meshtastic/go/generated";
+option java_outer_classname = "MonitorAssistProtos";
+option java_package = "org.meshtastic.proto";
+option swift_prefix = "";
+
+/*
+ * Mensaje de telemetría médica privada para el TFM.
+ * Transmitido de forma compacta en el puerto privado 256 (PRIVATE_APP).
+ */
+message MonitorAssistTelemetry {
+
+  /*
+   * Timestamp de generación mensaje en milisegundos
+   */
+  uint32 timestamp = 1;
+
+  /*
+   * Frecuencia cardíaca en pulsaciones por minuto (BPM)
+   */
+  uint32 heart_rate = 2;
+
+  /*
+   * Latitud multiplicada por 10^7
+   */
+  int32 lat = 3;
+
+  /*
+   * Longitud multiplicada por 10^7
+   */
+  int32 lon = 4;
+
+  /*
+   * Flags de estado del paciente: 0x00=Normal, 0x01=Pánico, 0x02=Caída IMU
+   */
+  uint32 assist_flags = 5;
+}
