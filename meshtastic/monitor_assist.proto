@@ -15,7 +15,7 @@ option swift_prefix = "";
 message MonitorAssistTelemetry {
 
   /*
-   * Timestamp de generación mensaje en milisegundos
+   * Timestamp de generación del mensaje en segundos (epoch unix)
    */
   uint32 timestamp = 1;
 
